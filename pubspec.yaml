@@ -8,6 +8,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_map: 6.1.0
-  latlong2: 0.8.1
+  latlong2: ^0.9.1
 flutter:
   uses-material-design: true
