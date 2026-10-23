@@ -1,16 +1,17 @@
 name: dallini_maps
-description: Dallini Maps - Waze style maps
+description: Waze style maps
 publish_to: 'none'
 version: 1.0.0+1
+
 environment:
   sdk: '>=3.0.0 <4.0.0'
+
 dependencies:
   flutter:
     sdk: flutter
   flutter_map: ^6.1.0
   latlong2: ^0.9.0
-  geolocator: ^10.1.0
-  flutter_map_location_marker: ^8.0.0
-cupertino_icons: ^1.0.2
+  geolocator: ^12.0.0
+
 flutter:
   uses-material-design: true
