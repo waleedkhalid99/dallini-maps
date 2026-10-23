@@ -12,6 +12,16 @@ jobs:
           rm -f pubspec.lock
           flutter clean
           flutter create . --platforms=android --project-name dallini_maps --no-overwrite
+          # اصلاح خطأ الكوتلن
+          sed -i "s/ext.kotlin_version = .*/ext.kotlin_version = '1.9.22'/" android/build.gradle
+          echo "
+          android {
+            packagingOptions {
+              resources {
+                excludes += ['/META-INF/*.kotlin_module']
+              }
+            }
+          }" >> android/app/build.gradle
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
