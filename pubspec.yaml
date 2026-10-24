@@ -1,13 +1,17 @@
-name: dallini_maps
-description: Dallini Maps
-publish_to: 'none'
+name: dallini
+description: دليني - كل طريق اله دليل
+publish_to: none
 version: 1.0.0+1
+
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: '>=3.0.0 <4.0.0'
+
 dependencies:
   flutter:
     sdk: flutter
-  flutter_map: 6.1.0
-  latlong2: ^0.9.1
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.0
+  geolocator: ^11.0.0
+
 flutter:
   uses-material-design: true
