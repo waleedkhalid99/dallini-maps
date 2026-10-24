@@ -9,10 +9,11 @@ jobs:
         with:
           flutter-version: '3.22.3'
           channel: 'stable'
-      - name: Fix Android v1 embedding
+      - name: Fix Android v1 and Kotlin
         run: |
           rm -rf android
           flutter create . --platforms=android --project-name dallini --org com.example
+          sed -i 's/id "org.jetbrains.kotlin.android" version ".*"/id "org.jetbrains.kotlin.android" version "1.9.22"/' android/settings.gradle
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
